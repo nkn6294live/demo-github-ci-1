@@ -1,0 +1,15 @@
+#version: '3.9'
+services:
+  service:
+    container_name: demo-github-ci-1
+    image: demo-github-ci:latest
+    # build: ./
+    #    command: ["npm", "--prefix", "/app", "run", "start"]
+    restart: always
+    network_mode: "host"
+    env_file: ./.env
+    volumes:
+      - /etc/localtime:/etc/localtime
+      - /etc/timezone:/etc/timezone
+      # - ./.env:/app/.env
+      - ./data:/app/data

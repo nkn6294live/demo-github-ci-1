@@ -1,3 +1,4 @@
+require('dotenv').config()
 const http = require('node:http')
 const os = require('node:os')
 const osPlatform = os.platform()
@@ -101,6 +102,8 @@ const server = http.createServer(function (req, res) {
             }
         } else if (urlObj.pathname == '/version') {
             data = { version }
+        } else if (urlObj.pathname.startsWith('/public')) {
+            // static file
         }
         res.writeHead(status, { 'content-type': respContentType })
         res.write(JSON.stringify(data))
