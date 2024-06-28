@@ -1,0 +1,22 @@
+{
+  "name": "demo-github-ci-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "pkg": {
+    "targets": [
+      "node18-linux"
+    ],
+    "assets": [
+      "node_modules/.prisma/client/*.*"
+    ],
+    "outputPath": "dist"
+  }
+}
